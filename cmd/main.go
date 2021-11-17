@@ -1,9 +1,9 @@
 package main
 
 import (
-	"gWeb/common"
-	"gWeb/enum"
-	"gWeb/web"
+	"github.com/Byfengfeng/gWeb/common"
+	"github.com/Byfengfeng/gWeb/enum"
+	"github.com/Byfengfeng/gWeb/web"
 )
 
 func main() {

@@ -2,7 +2,7 @@ package common
 
 import (
 	"errors"
-	"gWeb/enum"
+	"github.com/Byfengfeng/gWeb/enum"
 )
 
 type WebBase struct {

@@ -2,9 +2,9 @@ package web
 
 import (
 	"encoding/json"
-	"gWeb/common"
-	"gWeb/enum"
-	"gWeb/inter"
+	"github.com/Byfengfeng/gWeb/common"
+	"github.com/Byfengfeng/gWeb/enum"
+	"github.com/Byfengfeng/gWeb/inter"
 	"net/http"
 )
 
