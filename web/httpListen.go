@@ -43,6 +43,11 @@ func (g *gWebService) Start()  {
 					if g.contentType == enum.From {
 						if request.Form != nil {
 							if len(request.Form) > 0 {
+								token := request.Header.Get("token")
+								if token != "" {
+									request.Form["token"] = []string{token}
+								}
+
 								res = hanDel(request.Form)
 							}
 						}
