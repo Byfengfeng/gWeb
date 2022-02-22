@@ -25,6 +25,12 @@ func NewGWebService(addr string,contentType enum.ContentType,ReqFn common.WebBas
 func (g *gWebService) Start()  {
 	for url,reqMap := range g.reqFn.ReqMap {
 		http.HandleFunc(url, func(writer http.ResponseWriter, request *http.Request) {
+			writer.Header().Set("Cache-Control","no-cache")
+			writer.Header().Set("Access-Control-Allow-Origin", "*")
+			writer.Header().Set("Access-Control-Allow-Headers", "Content-Type,AccessToken,X-CSRF-Token, Authorization, Token")
+			writer.Header().Set("Access-Control-Allow-Methods", "POST, GET, OPTIONS")
+			writer.Header().Set("Access-Control-Expose-Headers", "Content-Length, Access-Control-Allow-Origin, Access-Control-Allow-Headers, Content-Type")
+			writer.Header().Set("Access-Control-Allow-Credentials", "true")
 			var res interface{}
 			method := request.Method
 
